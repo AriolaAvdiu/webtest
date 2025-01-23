@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Josefin Sans", serif;
+}
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+.main-banner {
+    background-image: url('./images/banner.jpg');
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-right: 10vw;
+}
+.banner-content {
+    position: relative;
+    width: 30vw;
+    margin-left: auto;
+    margin-right: 0;
+    text-align: right;
+    top: 40vh;
+}
+.banner-content h2 {
+    font-size: 4rem;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 4rem;
+}
+.banner-content .outlined {
+    background: transparent;
+    border: 1px solid #fff;
+    font-size: 1.25rem;
+    font-weight: 400;
+    padding: 0.8rem 3rem;
+    color: #fff;
+}
+.carousel {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+.carousel .image-card a{
+    display: flex;
+    justify-content: start;
+}
+.carousel img {
+    margin-bottom: 1.4rem;
+}
+.carousel a, .product-card a {
+    color: #000;
+    font-size: 1.4rem;
+    text-decoration: none;
+    font-weight: 300;
+}
+.carousel a:hover, .product-card a:hover {
+    text-decoration: underline;
+}
+.featured-products {
+    padding: 2rem;
+    position: relative;
+}
+.featured-products h2 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+.featured-products .products {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.list::-webkit-scrollbar {
+    display: none;
+}
+.products .product-card .image {
+    width: calc((100vw - 10rem)/4);
+    height: calc((100vw - 10rem)/4);
+    box-shadow: 0px 4px 4px 0px rgba(0,0,10,0.1);
+    text-align: center;
+    align-content: center;
+    margin-bottom: 1.4rem;
+}
+.button {
+    position: absolute;
+    top: 50%;
+    width: 2rem;
+    height: 2rem;
+    transform: translateY(-50%);
+}
+.button-previous {
+    left: 1.5rem;
+    transform: rotate(180deg);
+}
+.button-next {
+    right: 1.5rem;
+}
+  
+/* mobile screen size */
+@media(max-width: 600px) {
+    .main-banner {
+        height: 70vh;
+        width: 100vw;
+        padding: 4rem;
+    } 
+    .carousel .image-card {
+        margin-bottom: 2rem;
+    }
+    .banner-content {
+        width: 100%;
+        top: 20vh;
+        text-align: left;
+    }
+    .banner-content h2 {
+        font-size: 3rem;
+        font-weight: 500;
+        color: #fff;
+        margin-bottom: 2rem;
+    }
+    .carousel {
+        grid-template-columns: auto;
+        text-align: center;
+        gap: 2rem;
+    }
+    .carousel img {
+        width: 100%;
+        height: 100%;
+    }
+    .products .product-card .image {
+        width: 100%;
+        height: 100%;
+    }
+    .featured-products h2 {
+        font-size: 1.4rem;
+    }
+    a {
+        font-size: 1.2rem;
+    }
+}
+
+/* laptop size */
+@media(min-width: 601px){
+    .carousel .image-card {
+        padding: 1rem;
+    }
+    .carousel img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .products .product-card .image {
+        width: 100%;
+        height: 100%;
+    }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hab+dash</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <section class="main-banner">
+        <div class="banner-content">
+            <h2>Add color to your masterpiece</h2>
+            <button class="outlined">Shop Now</button>
+        </div>
+    </section>
+    <section class="carousel">
+        <div class="image-card">
+            <img src="./style/images/carousel.png" alt="carousel-placeholder">
+            <a href="#">GLIDE</a>
+        </div>
+        <div class="image-card">
+            <img src="./style/images/carousel.png" alt="carousel-placeholder">
+            <a href="#">MAGNETIC CORE BOBBIN</a>
+        </div>
+        <div class="image-card">
+            <img src="./style/images/carousel.png" alt="carousel-placeholder">
+            <a href="#">PREMIUM STABILIZER</a>
+        </div>
+    </section>
+
+    <section class="featured-products">
+        <h2>Featured Products</h2>
+        <ul class="products">
+            <li class="product-card">
+                <div class="image">
+                    <img src="./style/images/placeholder.png" alt="product-placeholder">
+                </div>
+                <a href="#">EMBROIDERY STABILIZER</a>
+            </li>
+            <li class="product-card">
+                <div class="image">
+                    <img src="./style/images/placeholder.png" alt="product-placeholder">
+                </div>
+                <a href="#">CUBBIE GREY ELEPHANT</a>
+            </li>
+            <li class="product-card">
+                <div class="image">
+                    <img src="./style/images/placeholder.png" alt="product-placeholder">
+                </div>
+                <a href="#">KIMBERBELL CUP OF CHEER</a>
+            </li>
+            <li class="product-card">
+                <div class="image">
+                    <img src="./style/images/placeholder.png" alt="product-placeholder">
+                </div>
+                <a href="#">KIMBERBELL TWO SCOOPS</a>
+            </li>
+            <li class="product-card">
+                <div class="image">
+                    <img src="./style/images/placeholder.png" alt="product-placeholder">
+                </div>
+                <a href="#">EMBROIDERY STABILIZER</a>
+            </li>
+            <li class="product-card">
+                <div class="image">
+                    <img src="./style/images/placeholder.png" alt="product-placeholder">
+                </div>
+                <a href="#">CUBBIE GREY ELEPHANT</a>
+            </div>
+            <li class="product-card">
+                <div class="image">
+                    <img src="./style/images/placeholder.png" alt="product-placeholder">
+                </div>
+                <a href="#">KIMBERBELL CUP OF CHEER</a>
+            </li>
+            <li class="product-card">
+                <div class="image">
+                    <img src="./style/images/placeholder.png" alt="product-placeholder">
+                </div>
+                <a href="#">KIMBERBELL TWO SCOOPS</a>
+            </li>
+        </ul>
+        <button onclick="handleClick('previous')" class="button button-previous" type="button">➜</button>
+        <button onclick="handleClick('next')" class="button button-next" type="button">➜</button>
+    </section>
+
+
+    <script>
+         const list = document.querySelector(".products");
+
+        // we will use the width of the item to decide how much we want our carousel to scroll.
+        const item = document.querySelector(".product-card");
+        const itemWidth = item.offsetWidth;
+
+        function handleClick(direction) {
+        // scrolling with the item width we got
+        if(direction === "previous") {
+            list.scrollBy({ left: -itemWidth, behavior: "smooth" });
+        } else {
+            list.scrollBy({ left: itemWidth, behavior: "smooth" });
+        }
+        }
+    </script>
+</body>
+</html>
